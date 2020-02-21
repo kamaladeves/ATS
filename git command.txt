@@ -1,0 +1,194 @@
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~
+$ git https://venkateshdhande@bitbucket.org/radhashanthini/spider-ml.git
+error: cannot spawn git-https://venkateshdhande@bitbucket.org/radhashanthini/spider-ml.git: Invalid argument
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~
+$ git https://venkateshdhande@bitbucket.org/radhashanthini/spider-ml.git@Spider-ML
+error: cannot spawn git-https://venkateshdhande@bitbucket.org/radhashanthini/spider-ml.git@Spider-ML: Invalid argument
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~
+$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~
+$ git clone https://venkateshdhande@bitbucket.org/radhashanthini/spider-ml.git
+Cloning into 'spider-ml'...
+Logon failed, use ctrl+c to cancel basic credential prompt.
+remote: Counting objects: 10714, done.
+remote: Compressing objects: 100% (8430/8430), done.
+error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054
+fatal: the remote end hung up unexpectedly
+fatal: early EOF
+fatal: index-pack failed
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ ghostdriver.log
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+'My Documents'@
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{1c3790b4-b8ad-11e8-aa21-e41d2d101530}.TM.blf
+ NTUSER.DAT{1c3790b4-b8ad-11e8-aa21-e41d2d101530}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{1c3790b4-b8ad-11e8-aa21-e41d2d101530}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Untitled.ipynb
+ Videos/
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~
+$ cd desktop
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop
+$ ls
+ desktop.ini   files/  'Microsoft Edge.lnk'*   scraper/   Slack.lnk*   spyder3.exe*
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop
+$ git clone https://venkateshdhande@bitbucket.org/radhashanthini/spider-ml.git
+Cloning into 'spider-ml'...
+remote: Counting objects: 10714, done.
+remote: Compressing objects: 100% (8430/8430), done.
+remote: Total 10714 (delta 1384), reused 10641 (delta 1351)
+Receiving objects: 100% (10714/10714), 345.10 MiB | 405.00 KiB/s, done.
+Resolving deltas: 100% (1384/1384), done.
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop
+$ cd spider-ml/
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop/spider-ml (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Wikipedia/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop/spider-ml (master)
+$ git add -A
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop/spider-ml (master)
+$ git commit -m "Added code for extracting Wikepedia data"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'moback@LAPTOP-PE5C8KMH.(none)')
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop/spider-ml (master)
+$ git config --global user.email "venkateshd@moback.com"
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop/spider-ml (master)
+$ git config --global user.name "venkateshdhande"
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop/spider-ml (master)
+$ git commit -m "Added code for extracting Wikepedia data"
+[master a8dc503] Added code for extracting Wikepedia data
+ 7 files changed, 268 insertions(+)
+ create mode 100644 Wikipedia/__pycache__/company_states.cpython-36.pyc
+ create mode 100644 Wikipedia/__pycache__/company_url.cpython-36.pyc
+ create mode 100644 Wikipedia/__pycache__/county_company_list.cpython-36.pyc
+ create mode 100644 Wikipedia/company_states.py
+ create mode 100644 Wikipedia/company_url.py
+ create mode 100644 Wikipedia/county_company_list.py
+ create mode 100644 Wikipedia/main.py
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop/spider-ml (master)
+$ git push
+remote: Forbidden
+fatal: unable to access 'https://venkateshdhande@bitbucket.org/radhashanthini/spider-ml.git/': The requested URL returned error: 403
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop/spider-ml (master)
+$ git push
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 5.40 KiB | 1.80 MiB/s, done.
+Total 11 (delta 2), reused 0 (delta 0)
+error: RPC failed; HTTP 403 curl 22 The requested URL returned error: 403
+fatal: the remote end hung up unexpectedly
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
+
+moback@LAPTOP-PE5C8KMH MINGW64 ~/desktop/spider-ml (master)
+$
